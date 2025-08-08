@@ -14,6 +14,7 @@ from supabase_utils import (
 )
 from datetime import datetime, timedelta, timezone
 from apscheduler.schedulers.background import BackgroundScheduler
+from health_check import start_health_server
 import re
 
 # Load environment variables from .env file
@@ -469,4 +470,12 @@ def test_sync(message):
 if __name__ == "__main__":
     print("Bot is polling...")
     print(f"Google Drive sync scheduled every {SYNC_INTERVAL_MINUTES} minutes")
+    
+    # Start health check server for Railway
+    try:
+        start_health_server()
+        print("✅ Health check server started")
+    except Exception as e:
+        print(f"⚠️ Health check server failed to start: {e}")
+    
     bot.polling(none_stop=True)
