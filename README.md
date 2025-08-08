@@ -49,23 +49,7 @@ A Telegram bot for selling photosession packages with dynamic pricing and Supaba
 5. **Set up Google Drive**: Follow [GOOGLE_DRIVE_SETUP.md](GOOGLE_DRIVE_SETUP.md)
 6. **Run the bot**: `python bot.py`
 
-## Environment Variables
 
-```env
-# Telegram Bot Configuration
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
-
-# Supabase Configuration
-SUPABASE_URL=your_supabase_project_url_here
-SUPABASE_API_KEY=your_supabase_anon_key_here
-
-# Admin Configuration
-ADMIN_CHAT_ID=your_admin_telegram_chat_id_here
-
-# Google Drive Configuration
-GOOGLE_DRIVE_FOLDER_ID=your_google_drive_folder_id_here
-GOOGLE_SERVICE_ACCOUNT_JSON={"type": "service_account", ...}
-```
 
 ## Database Schema
 
@@ -181,11 +165,6 @@ The bot can be deployed to any platform that supports Python:
 - AWS Lambda
 - Google Cloud Run
 
-## Support
-
-For questions or issues:
-- 📸 Instagram: @wowmotion_photo_video
-- 📞 Phone: +7 (706) 651-22-93, +7 (705) 705-82-75
 
 ## License
 
